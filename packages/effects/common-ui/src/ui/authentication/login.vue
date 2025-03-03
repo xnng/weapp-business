@@ -11,7 +11,7 @@ import { useRouter } from 'vue-router';
 import { $t } from '@vben/locales';
 
 import { useVbenForm } from '@vben-core/form-ui';
-import { VbenButton, VbenCheckbox } from '@vben-core/shadcn-ui';
+import { VbenButton } from '@vben-core/shadcn-ui';
 
 import Title from './auth-title.vue';
 import ThirdPartyLogin from './third-party-login.vue';
@@ -110,7 +110,7 @@ defineExpose({
 
     <Form />
 
-    <div
+    <!-- <div
       v-if="showRememberMe || showForgetPassword"
       class="mb-6 flex justify-between"
     >
@@ -131,7 +131,7 @@ defineExpose({
       >
         {{ $t('authentication.forgetPassword') }}
       </span>
-    </div>
+    </div> -->
     <VbenButton
       :class="{
         'cursor-wait': loading,
@@ -148,22 +148,22 @@ defineExpose({
       v-if="showCodeLogin || showQrcodeLogin"
       class="mb-2 mt-4 flex items-center justify-between"
     >
-      <VbenButton
+      <!-- <VbenButton
         v-if="showCodeLogin"
         class="w-1/2"
         variant="outline"
         @click="handleGo(codeLoginPath)"
       >
         {{ $t('authentication.mobileLogin') }}
-      </VbenButton>
-      <VbenButton
+      </VbenButton> -->
+      <!-- <VbenButton
         v-if="showQrcodeLogin"
         class="ml-4 w-1/2"
         variant="outline"
         @click="handleGo(qrCodeLoginPath)"
       >
         {{ $t('authentication.qrcodeLogin') }}
-      </VbenButton>
+      </VbenButton> -->
     </div>
 
     <!-- 第三方登录 -->
